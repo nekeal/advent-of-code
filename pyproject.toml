@@ -30,6 +30,7 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.11, <4.0"
 aoc-python-cli = "*"
+z3-solver = "^4.12.4.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "*"
@@ -125,3 +126,7 @@ disallow_any_unimported = true
 #   "tests/my_thing/test_my_thing",
 # ]
 # disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = "z3.*"
+ignore_missing_imports = true
