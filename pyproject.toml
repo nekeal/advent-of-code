@@ -31,6 +31,7 @@ packages = [
 python = ">=3.11, <4.0"
 aoc-python-cli = "*"
 z3-solver = "^4.12.4.0"
+networkx = "^3.2.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "*"
@@ -128,5 +129,5 @@ disallow_any_unimported = true
 # disallow_untyped_defs = false
 
 [[tool.mypy.overrides]]
-module = "z3.*"
+module = ["z3.*", "networkx.*"]
 ignore_missing_imports = true
