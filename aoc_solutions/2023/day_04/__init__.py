@@ -18,7 +18,7 @@ class Challenge(BaseChallenge):
     def get_score(winning_numbers: list[int], got_numbers: list[int]) -> int:
         return len(set(winning_numbers) & set(got_numbers))
 
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         total_sum = 0
         for line in self.get_input_lines(part=1):
             parsed_line = self.parse_line(line)
@@ -26,7 +26,7 @@ class Challenge(BaseChallenge):
                 total_sum += 2 ** (score - 1)
         return total_sum
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         number_of_cards: dict[int, int] = defaultdict(lambda: 1)
         for i, line in enumerate(self.get_input_lines(part=2)):
             number_of_cards.setdefault(i, 1)

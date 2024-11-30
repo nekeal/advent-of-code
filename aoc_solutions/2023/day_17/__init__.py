@@ -43,11 +43,11 @@ def find_path(graph: list[list[int]], start: node, end: node, min_step, max_step
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_lines, m, n = self.get_data(part=1)
         return find_path(input_lines, (0, 0), (n - 1, m - 1), min_step=1, max_step=3)
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_lines, n, m = self.get_data(part=2)
         return find_path(input_lines, (0, 0), (n - 1, m - 1), min_step=4, max_step=10)
 

@@ -2,7 +2,7 @@ from collections import deque
 from functools import cached_property
 
 from aoc.base import BaseChallenge
-from aoc.data_structures import Matrix
+from aoc_solutions.data_structures import Matrix
 
 pipe_to_neighbors: dict[str, list[tuple[int, int]]] = {
     "|": [(0, -1), (0, 1)],
@@ -84,13 +84,13 @@ class PipeMatrix(Matrix):
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=1)
         matrix = PipeMatrix(input_lines)
         distances = matrix.bfs()
         return max(distances.values())
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=2)
         matrix = PipeMatrix(input_lines)
         matrix.replace_starting_point_with_pipe()

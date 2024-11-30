@@ -3,7 +3,7 @@ from functools import reduce
 from typing import Generator
 
 from aoc.base import BaseChallenge
-from aoc.data_structures import Matrix
+from aoc_solutions.data_structures import Matrix
 
 
 class MirrorMatrix(Matrix):
@@ -25,7 +25,7 @@ class MirrorMatrix(Matrix):
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         return reduce(
             operator.add,
             (
@@ -35,7 +35,7 @@ class Challenge(BaseChallenge):
             ),
         )
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         return reduce(
             operator.add,
             (

@@ -15,7 +15,7 @@ class Challenge(BaseChallenge):
         else:
             self.RANGE = [200000000000000, 400000000000000]
 
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         points = list(self.get_points(part=1))
         result = 0
         for i in range(len(points)):
@@ -30,7 +30,7 @@ class Challenge(BaseChallenge):
                     result += 1
         return result
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         points = list(self.get_points(part=2))
         # variables to be solved (related to the rock)
         x = Real("x")

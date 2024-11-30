@@ -28,7 +28,7 @@ class Challenge(BaseChallenge):
                 return True
         return False
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         tmp_number: str = ""
         matrix = self.get_input_lines(part=1)
         stars_neighbours = defaultdict(list)
@@ -56,7 +56,7 @@ class Challenge(BaseChallenge):
                 total_sum += mul(*neighbours)
         return total_sum
 
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         tmp_number: str = ""
         neighbour_to_symbol = False
         matrix = self.get_input_lines(part=1)

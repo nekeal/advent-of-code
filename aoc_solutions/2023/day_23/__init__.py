@@ -161,7 +161,7 @@ def dfs(v, d, end, neighbors, visited):
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         data = self.get_input_lines(part=1)
         neighbors = get_neighbours(data)
         n, m = len(data), len(data[0])
@@ -169,7 +169,7 @@ class Challenge(BaseChallenge):
 
         return result
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         global ans
         ans = 0
         data = self.get_input_lines(part=2)

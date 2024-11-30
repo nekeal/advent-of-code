@@ -7,7 +7,7 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         times, distances = self.get_parsed_input(self.get_input_lines(part=1))
         winning_possibilities = []
         for time, distance in zip(times, distances):
@@ -15,7 +15,7 @@ class Challenge(BaseChallenge):
             winning_possibilities.append(len(list(winning_numbers)))
         return reduce(mul, winning_possibilities)
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         times, distances = self.get_parsed_input(self.get_input_lines(part=2))
         time = int("".join(map(str, times)))
         distance = int("".join(map(str, distances)))

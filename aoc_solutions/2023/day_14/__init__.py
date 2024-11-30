@@ -5,12 +5,12 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         simple_matrix = tuple(tuple(line) for line in self.get_input_lines(part=1))
         new_matrix = self.tilt(simple_matrix)
         return self.score(new_matrix)
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         simple_matrix = tuple(tuple(line) for line in self.get_input_lines(part=2))
         t = 0
         target = 1_000_000_000

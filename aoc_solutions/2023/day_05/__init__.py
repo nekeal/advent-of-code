@@ -68,7 +68,7 @@ class Range:
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_blocks = self.get_input_blocks()
         sources = list(map(int, input_blocks[0].split(":")[1].split()))
         destinations = []
@@ -85,7 +85,7 @@ class Challenge(BaseChallenge):
             sources, destinations = destinations, sources
         return min(sources)
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_blocks = self.get_input_blocks()
         destinations = []
         sources: list[Range] = list(self.get_seeds_ranges(input_blocks[0]))

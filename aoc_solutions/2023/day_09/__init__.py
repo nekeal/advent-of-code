@@ -6,7 +6,7 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         histories = self.get_histories(part=1)
         total_sum = 0
         for history in histories:
@@ -14,7 +14,7 @@ class Challenge(BaseChallenge):
             total_sum += result[0][-1]
         return total_sum
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         histories = self.get_histories(part=2)
         total_sum = 0
         for history in histories:

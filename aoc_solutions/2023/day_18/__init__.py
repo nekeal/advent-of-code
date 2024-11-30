@@ -32,7 +32,7 @@ class Challenge(BaseChallenge):
             y += vec_map[direction][1] * length
             yield x, y
 
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         vertices = self.get_vertices(
             (
                 (line.split()[0], int(line.split()[1]))
@@ -42,7 +42,7 @@ class Challenge(BaseChallenge):
         )
         return self.calc_inners(vertices)
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         vertices = self.get_vertices(
             (
                 self.parse_hex(line.split()[2].strip("()"))

@@ -6,7 +6,7 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         """
         Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
         Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
@@ -27,7 +27,7 @@ class Challenge(BaseChallenge):
                 result += game_id
         return result
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         result = 0
 
         for line in self.get_input_lines(part=2):

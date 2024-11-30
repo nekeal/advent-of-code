@@ -23,7 +23,7 @@ cards_to_values: dict[str, int] = {
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=1)
         parsed_input = list(self.get_parsed_input(input_lines))
         sorted_values = sorted(
@@ -36,7 +36,7 @@ class Challenge(BaseChallenge):
 
         return total_sum
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=2)
         parsed_input = list(self.get_parsed_input(input_lines))
         cards_to_values_with_joker = cards_to_values.copy()

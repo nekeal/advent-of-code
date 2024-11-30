@@ -5,7 +5,7 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=1)
         instructions: str = input_lines[0]
         starting_node: str = "AAA"
@@ -18,7 +18,7 @@ class Challenge(BaseChallenge):
                 print(i)
                 return i
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=2)
         instructions: str = input_lines[0]
         node_map = self.get_node_map(input_lines[2:])

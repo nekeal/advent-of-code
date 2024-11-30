@@ -4,7 +4,7 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def part_1(self):
+    def part_1(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=1)
         total_sum = 0
         for pair in combinations(
@@ -13,7 +13,7 @@ class Challenge(BaseChallenge):
             total_sum += abs(pair[0][0] - pair[1][0]) + abs(pair[0][1] - pair[1][1])
         return total_sum
 
-    def part_2(self):
+    def part_2(self, input_lines: list[str]):
         input_lines = self.get_input_lines(part=1)
         total_sum = 0
         for pair in combinations(
