@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 packages = [
-    { include = "advent_of_code", from = "src" }
+    { include = "aoc_solutions", from = "."},
 ]
 
 [tool.poetry.dependencies]

@@ -1,6 +1,6 @@
 # Solutions for Advent of Code in Python
 
-This project uses [aoc-python-cli](https://nekeal.github.io/advent-of-code-python-cli) for 
+This project uses [aoc-python-cli](https://github.com/advent-of-code-python-cli) for 
 scaffolding the challenge for a given day, verifying the solution, and auto submitting it to the Advent of Code website.
 
 ---
@@ -22,8 +22,8 @@ poetry install
 poetry shell
 ```
 ### Scaffold a new day
-If you want get your puzzle input downloaded automatically, you need to set the `AOC_SESSION`
-environment variable to your [session cookie](https://github.com/wimglenn/advent-of-code-wim/issues/1. Then run:
+If you want to get your puzzle input downloaded automatically, you need to set the `AOC_SESSION`
+environment variable to your [session cookie](https://github.com/wimglenn/advent-of-code-wim/issues/1). Then run:
 
 ```sh
 aoc new-day <day>
