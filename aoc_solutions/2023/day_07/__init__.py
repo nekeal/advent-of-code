@@ -79,12 +79,13 @@ class Challenge(BaseChallenge):
         else:  # high card
             return 1, hand_by_numbers
 
+    @classmethod
     def calculate_hand_value_with_jokers(
-        self, hand_and_bid: tuple[str, int], cards_to_values: dict[str, int]
+        cls, hand_and_bid: tuple[str, int], cards_to_values: dict[str, int]
     ) -> tuple[int, tuple[int, ...]]:
         hand, bid = hand_and_bid
         hand_by_numbers = tuple(cards_to_values[card] for card in hand)
-        initial_value = self.calculate_hand_value(
+        initial_value = cls.calculate_hand_value(
             (hand.replace("J", ""), bid), cards_to_values=cards_to_values
         )
         if not (joker_count := hand.count("J")):

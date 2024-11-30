@@ -1,6 +1,5 @@
 import math
 import random
-from pathlib import Path
 
 from z3 import Real, Solver
 
@@ -8,9 +7,12 @@ from aoc.base import BaseChallenge
 
 
 class Challenge(BaseChallenge):
-    def __init__(self, use_test_data: bool = False, data_dir: Path | None = None):
-        super().__init__(use_test_data, data_dir)
-        if self._use_test_data:
+    def __init__(
+            self,
+            input_provider,
+    ):
+        super().__init__(input_provider)
+        if len(self.get_input_lines()) < 10:
             self.RANGE = [7, 27]
         else:
             self.RANGE = [200000000000000, 400000000000000]

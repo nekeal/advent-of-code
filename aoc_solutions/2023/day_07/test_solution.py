@@ -57,7 +57,7 @@ class TestChallenge(BaseTestChallenge):
     )
     def test_calculate_hand_value_with_jokers(self, hand, expected_result):
         assert (
-            self.challenge_class().calculate_hand_value_with_jokers(
+            self.challenge_class.calculate_hand_value_with_jokers(
                 (hand, 0), cards_to_values=cards_to_values
             )[0]
             == expected_result
