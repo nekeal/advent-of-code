@@ -77,3 +77,8 @@ venv.bak/
 
 # IDEs
 .idea/
+
+# test data
+/data/*/*.txt
+!/data/*/*test*.txt
+!/data/*/00*.txt
